@@ -1,0 +1,134 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="cinema.css">
+    <title>UPA2 Cinemas</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-logo"><img src="img/logo.png" alt="logo"></div>
+        <nav>
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#films">Films</a></li>
+                <li> <a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Partie Slider -->
+    <div class="slider">
+        <div onclick="slideLeft()" class="slide_left"><img src="img/left-arrow.png" alt="left-arrow"></div>
+        <img class="slide" src="img/venom.jpg" alt="slider_img1">
+        <img class="slide hidden" src="img/justiceleague.jpg" alt="slider_img2">
+        <img class="slide hidden" src="img/animauxfantastiques.jpg" alt="slider_img3">
+        <div onclick="slideRight()" class="slide_right"><img src="img/right-arrow.png" alt="right-arrow"></div>
+    </div>
+    </div>
+    <!-- Partie Films -->
+    <h2 class="films-title">Films à l'affiche</h2>
+    <div class="films" id="films">
+        <div class="film_1">
+            <img onclick="view('desc_one')"
+                src="https://i.pinimg.com/originals/db/5e/f4/db5ef4ce7e7a1f9fc1950ab755a74dae.jpg" alt="film_img">
+            <div class="desc_one hidden">
+                <h3>Vendeur</h3>
+                <p>Serge est l’un des meilleurs vendeurs de France. Depuis 30 ans, il écume les zones commerciales et
+                    les grands magasins, garantissant à ses employeurs un retour sur investissement immédiat et
+                    spectaculaire. Il a tout sacrifié à sa carrière. Quand Gérald vient lui demander un travail pour
+                    financer les travaux de
+                    son futur restaurant.
+                    Contre toute attente, Gérald se découvre un don.</p>
+                <p><b>De Sylvain Desclous</b></p>
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/OgpzGOQBbek" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="desc_seance">
+                    <h4>Séances :</h4>
+                    <div class="seances">
+                        <p onclick="show('reservation')" class="seance vendredi">Vendredi : 16h30</p>
+                        <p onclick="show('reservation')" class="seance samedi">Samedi : 19h00</p>
+                        <p onclick="show('reservation')" class="seance dimanche">Dimanche : 11h00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="film_2">
+            <img onclick="view('desc_two')"
+                src="http://fr.web.img3.acsta.net/r_1280_720/pictures/16/12/20/09/53/114160.jpg" alt="film_img">
+            <div class="desc_two hidden">
+                <h3>Seuls</h3>
+                <p>Leïla, 16 ans, se réveille en retard comme tous les matins. Sauf qu'aujourd'hui, il n'y a personne
+                    pour la presser. Où sont ses parents? Elle prend son vélo et traverse son quartier, vide. Tout le
+                    monde a disparu. Se pensant l'unique survivante d'une catastrophe bizarre, elle finit par
+                    croiser quatre autres jeunes. Ils vont apprendre à survivre dans leur monde devenu hostile… Mais
+                    sont-ils
+                    vraiment seuls?</p>
+                <p><b>De David Moreau </b></p>
+                <iframe class="iframe2" width="300" height="200" src="https://www.youtube.com/embed/aCmeGBDqAu0"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="desc_seance">
+                    <h4>Séances :</h4>
+                    <div class="seances">
+                        <p onclick="show('reservation')" class="seance vendredi">Vendredi : 16h30</p>
+                        <p onclick="show('reservation')" class="seance samedi">Samedi : 19h00</p>
+                        <p onclick="show('reservation')" class="seance dimanche">Dimanche : 11h00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="film_3">
+            <img onclick="view('desc_three')"
+                src="https://www.etatdexception.net/wp-content/uploads/2016/10/Chouf-affiche.jpg" alt="film_img">
+            <div class="desc_three hidden">
+                <h3>Chouf</h3>
+                <p>Chouf, ça veut dire "regarde" en arabe. C'est le nom des guetteurs des réseaux de drogue de
+                    Marseille. Sofiane, 24 ans, brillant étudiant, intègre le business de son quartier après le meurtre
+                    de son frère, un caïd local. Pour retrouver les assassins, Sofiane est prêt à tout.
+                    Il abandonne famille, études et gravit rapidement les échelons. Aspiré par une violence qui le
+                    dépasse, Sofiane découvre la vérité et doit faire des choix.</p>
+                <p><b>De Karim Dridi</b></p>
+                <iframe class="iframe3" width="300" height="200" src="https://www.youtube.com/embed/wTwDiq36UUk"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <!-- Partie Séances -->
+                <div class="desc_seance">
+                    <h4>Séances :</h4>
+                    <div class="seances">
+                        <p onclick="show('reservation')" class="seance vendredi">Vendredi : 16h30</p>
+                        <p onclick="show('reservation')" class="seance samedi">Samedi : 19h00</p>
+                        <p onclick="show('reservation')" class="seance dimanche">Dimanche : 11h00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Partie Réservation -->
+    <div class="reservation hidden" id="reservation">
+        <img onclick="closeReservation('reservation')" src="img/close.png" alt="close-reservation"
+            class="close-reservation">
+        <div class="reservation-box">
+            <p> Combien de places ?</p>
+
+            <input class="reservation-places" type="text" id="places" onchange="prix()">
+            <p><span id="total">0 </span>€</p>
+
+            <button> <a href="#reservation" onclick="validation()">Réserver</a> </button>
+
+            <p id="message" class="message hidden">Vos places sont bien reservées! À très bientôt!</p>
+        </div>
+    </div>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="socialmedia">
+            <img src="img/facebook.png" alt="facebook">
+            <img src="img/twitter.png" alt="twitter">
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="upacinema.js"></script>
+</body>
+
+</html>
